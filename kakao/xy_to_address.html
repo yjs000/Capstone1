@@ -24,7 +24,7 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5906087974e7d7a8bf721049208cd799&libraries=services&libraries=services"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { // 크롤링 해온거에서 아무거나 하나 넣었음. 결과:서울특별시 서대문구 연희동
+    mapOption = { // 정민님이 주신 크롤링 해온거에서 x,y좌표 아무거나 하나 넣었음. 결과:서울특별시 서대문구 연희동
         center: new kakao.maps.LatLng(37.5730292  , 126.928108), // 지도의 중심좌표
         level: 1 // 지도의 확대 레벨
     };  
@@ -40,7 +40,7 @@ var marker = new kakao.maps.Marker(), // 클릭한 위치를 표시할 마커입
 
 // 현재 지도 중심좌표로 주소를 검색해서 지도 좌측 상단에 표시합니다
 searchAddrFromCoords(map.getCenter(), displayCenterInfo);
-console.log(displayCenterInfo)
+
 
 
 

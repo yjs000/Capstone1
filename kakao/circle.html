@@ -79,24 +79,6 @@
         map.setCenter(coords);
       }
 
-    //   var sw = new kakao.maps.LatLng(37.56667, 126.97440), // 사각형 영역의 남서쪽 좌표 
-		// 	ne = new kakao.maps.LatLng(37.56607, 126.97540); // 사각형 영역의 북동쪽 좌표
-
-		// // 사각형을 구성하는 영역정보를 생성한다
-		// var rectangleBounds = new kakao.maps.LatLngBounds(sw, ne);
-
-		// // 지도에 사각형을 표시한다 
-		// var rectangle = new kakao.maps.Rectangle({
-		// 	map: map, // 사각형을 표시할 지도 객체
-		// 	bounds: rectangleBounds, // 사각형의 영역 
-		// 	fillColor: '#FF0000', // 채움 색
-		// 	fillOpacity: 0.5, // 채움 불투명도
-		// 	strokeWeight: 3, // 선의 두께 
-		// 	strokeColor: '#FF0000', // 선 색
-		// 	strokeOpacity: 0.9, // 선 투명도
-		// 	strokeStyle: 'solid' // 선 스타일 
-		// });
-
 
       // 지도에 표시할 원을 생성합니다
       var circle = new kakao.maps.Circle({
@@ -112,7 +94,9 @@
 
       // 지도에 원을 표시합니다 
       circle.setMap(map);
+      //원에 접하는 사각형을 그립니다 //사각형이 보이진 않지만 그려진거
       bounds = circle.getBounds();
+      //사각형의 좌표 (북서, 남동)를 로그로 보여줍니다.
       var str = bounds.toString();
       console.log(str);      
     });
