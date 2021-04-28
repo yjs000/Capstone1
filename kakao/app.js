@@ -7,12 +7,16 @@ const app = express()
 
 app.use(morgan('dev'));
 
-// app.get('/', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'circle.html'));
-// })
-
-app.get('/', (req, res) => {
+app.get('/circle', (req, res) => {
   res.sendFile(path.join(__dirname, 'circle.html'));
+})
+
+app.get('/xy_to_address', (req, res) => {
+  res.sendFile(path.join(__dirname, 'xy_to_address.html'));
+})
+
+app.get('/address_to_xy', (req, res) => {
+  res.sendFile(path.join(__dirname, 'address_to_xy.html'));
 })
 
 app.listen(port, () => {
